@@ -1,0 +1,13 @@
+[package]
+name = "side-by-side-diff"
+version = "0.1.0"
+edition = "2021"
+description = "Create side-by-side diff text."
+license = "MIT"
+homepage = "https://github.com/tadashi-aikawa"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+similar = "2.2.1"
+unicode-width = "0.1.10"
