@@ -1,0 +1,35 @@
+version: "3"
+
+tasks:
+  default:
+    - task: help
+
+  help:
+    silent: true
+    cmds:
+      - task -l
+
+  ci:
+    desc: For CI
+    cmds:
+      - cargo test
+      - cargo build --release
+
+  release:
+    desc: |
+      Build
+          ∟ [Ex] task release VERSION=1.2.3
+          ∟ [Ex] task release VERSION=1.2.3-beta
+    deps:
+      - ci
+    cmds:
+      - task: ci
+      - cargo release version {{.VERSION}}
+      - git add .
+      - git commit -m "version {{.VERSION}}"
+      - git tag v{{.VERSION}} -m v{{.VERSION}}
+      - git push --tags
+      - git push
+    preconditions:
+      - sh: "[ {{.VERSION}} != '' ]"
+        msg: "VERSION is required."
