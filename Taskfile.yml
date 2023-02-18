@@ -23,8 +23,8 @@ tasks:
     deps:
       - ci
     cmds:
-      - task: ci
       - cargo release version {{.VERSION}}
+      - task: ci
       - git add .
       - git commit -m "version {{.VERSION}}"
       - git tag v{{.VERSION}} -m v{{.VERSION}}
