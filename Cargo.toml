@@ -6,7 +6,7 @@ authors = ["tadashi-aikawa <syou.maman@gmail.com>"]
 description = "Create side-by-side diff text."
 license = "MIT"
 homepage = "https://github.com/tadashi-aikawa/side-by-side-diff"
-documentation = "https://github.com/tadashi-aikawa/side-by-side-diff/README.md"
+documentation = "https://docs.rs/side-by-side-diff"
 repository = "https://github.com/tadashi-aikawa/side-by-side-diff"
 readme = "README.md"
 
