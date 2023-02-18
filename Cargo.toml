@@ -2,6 +2,7 @@
 name = "side-by-side-diff"
 version = "0.1.0"
 edition = "2021"
+authors = ["tadashi-aikawa <syou.maman@gmail.com>"]
 description = "Create side-by-side diff text."
 license = "MIT"
 homepage = "https://github.com/tadashi-aikawa/side-by-side-diff"
