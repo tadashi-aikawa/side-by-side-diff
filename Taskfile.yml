@@ -23,7 +23,7 @@ tasks:
     deps:
       - ci
     cmds:
-      - cargo release version {{.VERSION}}
+      - cargo release version {{.VERSION}} -x --no-confirm
       - task: ci
       - git add .
       - git commit -m "version {{.VERSION}}"
